@@ -4,6 +4,14 @@ import React from 'react';
 export default function About() {
   return (
     <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d404.3743232465327!2d-76.535405565322!3d3.4578351174378623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m3!3m2!1d3.4577877!2d-76.5354691!4m0!5e0!3m2!1ses-419!2sco!4v1708242014847!5m2!1ses-419!2sco"
+        width="600"
+        height="450"
+        style={{ border: 0 }}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
       <form>
         <div className="space-y-12">
           <div className="border-b border-gray-900/10 pb-12">
@@ -421,7 +429,7 @@ export default function About() {
           </button>
         </div>
       </form>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

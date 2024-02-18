@@ -10,7 +10,7 @@ const comforter_brush = Comforter_Brush({
 export default function Footer() {
   return (
     <div>
-      <div className="bg-[#301C03] text-[#FDF4E7]">
+      <div className="bg-[#301C03] text-[#FDF4E7] mt-8 sm:mt-16">
         <div className="px-6 py-6 md:px-16 md:py-16 flex flex-col md:flex-row">
           <div className="gap-3 md:w-7/12 md:pr-12 sm:py-10 sm:px-10">
             <div className="flex items-center">
