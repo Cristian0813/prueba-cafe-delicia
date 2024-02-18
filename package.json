@@ -2,6 +2,7 @@
   "name": "prueba_tecnica_cafe_delicia",
   "version": "0.1.0",
   "private": true,
+  "author": "Cristian Arias",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

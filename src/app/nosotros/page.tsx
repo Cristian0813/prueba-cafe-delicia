@@ -8,8 +8,8 @@ import image6 from '../../../public/home/product-3.jpg';
 export default function Nosotros() {
   return (
     <>
-      <div className="gap-4 px-4 sm:px-8 md:px-16 lg:px-40 mt-8 sm:mt-16">
-        <div className=" bg-blue-400 p-4 flex flex-col sm:flex-row">
+      <div className="gap-4 px-4 sm:px-8 md:px-32 mt-8 sm:mt-16 md:mt-16">
+        <div className="p-4 flex flex-col sm:flex-row">
           <div className="relative w-full sm:w-80 h-60 sm:h-96 mb-4 sm:mb-0 sm:mr-4 rounded-lg">
             <Image
               src={image1}
@@ -36,7 +36,7 @@ export default function Nosotros() {
             </div>
           </div>
         </div>
-        <div className="bg-green-400 p-4 md:flex md:mt-8 sm:mt-8 mt-8">
+        <div className="p-4 md:flex md:mt-8 sm:mt-8 mt-8">
           <div className=" md:text-left sm:text-center text-center md:flex p-4 ">
             <div className="flex items-center justify-center">
               <Image src={image2} alt="Localización" className="w-28 md:w-56" />
@@ -68,15 +68,15 @@ export default function Nosotros() {
             </div>
           </div>
         </div>
-        <div className="p-4 md:mt-10 sm:mt-10 mt-16">
-          <div className="items-center justify-center ml-5">
+        <div className="p-4 md:mt-10 sm:mt-10 mt-10">
+          <div className="text-center md:text-start sm:text-start ml-5">
             <h2 className="text-4xl text-[#171717] font-semibold mt-4">
               Nuestros Servicios
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 mt-4 items-center justify-center sm:items-center sm:justify-center md:items-center md:justify-center text-center">
             <div className="p-4">
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
                   src={image4}
                   alt="Café con galletas"
@@ -85,13 +85,13 @@ export default function Nosotros() {
                   className="rounded-2xl"
                 />
               </div>
-              <p className="text-black mt-2 text-center">
+              <p className="text-black text-sm mt-2">
                 <b>Cafetería especializada:</b> Probá nuestra panedería fresca y
                 emparejala con una bebidita caliente
               </p>
             </div>
             <div className="p-4">
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
                   src={image5}
                   alt="Batido de café"
@@ -100,13 +100,13 @@ export default function Nosotros() {
                   className="rounded-2xl"
                 />
               </div>
-              <p className="text-black mt-2 text-center">
+              <p className="text-black text-md mt-2">
                 <b>¿Tenés calor?:</b> Refrescate con nuestra línea de productos
                 heladitos
               </p>
             </div>
             <div className="p-4">
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
                   src={image6}
                   alt="Bisto de carne"
@@ -115,7 +115,7 @@ export default function Nosotros() {
                   className="rounded-2xl"
                 />
               </div>
-              <p className="text-black mt-2 text-center">
+              <p className="text-black text-sm mt-2">
                 <b>Bistro pa’ esa hambre:</b> A cualquier hora del día, tenemos
                 antojitos que te dan energía para seguir el día
               </p>
