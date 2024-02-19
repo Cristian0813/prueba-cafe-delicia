@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import Logo from '../../public/logo-white.png';
+import Logo from '/public/logo-white.png';
 import { Comforter_Brush } from 'next/font/google';
 
 const comforter_brush = Comforter_Brush({
@@ -30,7 +30,7 @@ export default function NavBar() {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-14 items-center justify-between">
               <div className="absolute inset-y-0 flex items-center sm:hidden">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                   <Image src={Logo} width={25} height={25} alt="" />

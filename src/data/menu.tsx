@@ -15,9 +15,11 @@ const menuNavegacion: MenuItems[] = [
   {
     id: 'contacto',
     text: 'contacto',
-    route: '/contacto',
+    route: '/home/contacto',
     current: 'false',
   },
+  
 ];
+
 
 export default menuNavegacion;

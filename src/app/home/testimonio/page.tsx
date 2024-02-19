@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import imagTesty from '../../../public/home/testimonial.jpg';
+import imagTesty from '/public/home/testimonial.jpg';
 
 export default function Testimonio() {
   return (

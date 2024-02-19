@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import contact1 from '../../../public/home/contact-1.jpg';
-import contact2 from '../../../public/home/contact-2.jpg';
+import contact1 from '/public/home/contact-1.jpg';
+import contact2 from '/public/home/contact-2.jpg';
 import Link from 'next/link';
 
 export default function Caenos() {
@@ -28,7 +28,7 @@ export default function Caenos() {
               </p>
             </div>
             <div>
-              <Link href="/contacto" legacyBehavior>
+              <Link href="/home/contacto" legacyBehavior>
                 <a className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-2xl text-[#5F3907] border border-[#5F3907] border-rounded shadow-sm hover:bg-[#F5BB70] hover:border-[#F5BB70] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
                   Contáctanos
                 </a>

@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import image1 from '../../../public/home/locally-sourced.jpg';
-import image2 from '../../../public/home/locally-sourced.png';
-import image3 from '../../../public/home/hollistic.png';
-import image4 from '../../../public/home/product-1.jpg';
-import image5 from '../../../public/home/product-2.jpg';
-import image6 from '../../../public/home/product-3.jpg';
+import image1 from '/public/home/locally-sourced.jpg';
+import image2 from '/public/home/locally-sourced.png';
+import image3 from '/public/home/hollistic.png';
+import image4 from '/public/home/product-1.jpg';
+import image5 from '/public/home/product-2.jpg';
+import image6 from '/public/home/product-3.jpg';
 export default function Nosotros() {
   return (
     <>

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import LogoWhite from '../../public/logo-white.png';
+import LogoWhite from '/public/logo-white.png';
 import { Comforter_Brush } from 'next/font/google';
 
 const comforter_brush = Comforter_Brush({
@@ -9,7 +9,7 @@ const comforter_brush = Comforter_Brush({
 });
 export default function Footer() {
   return (
-    <div>
+    <footer>
       <div className="bg-[#301C03] text-[#FDF4E7] mt-8 sm:mt-16">
         <div className="px-6 py-6 md:px-16 md:py-16 flex flex-col md:flex-row">
           <div className="gap-3 md:w-7/12 md:pr-12 sm:py-10 sm:px-10">
@@ -181,6 +181,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

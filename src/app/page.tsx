@@ -1,9 +1,10 @@
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import Footer from '@/components/footer/page';
+import Header from '@/components/header/page';
 import ImagenInicio from '@/components/ImagenInicio';
-import Testimonio from './testimonio/page';
-import Caenos from './caenos/page';
-import Nosotros from './nosotros/page';
+import Testimonio from '@/app/home/testimonio/page';
+import Caenos from '@/app/home/caenos/page';
+import Nosotros from '@/app/home/nosotros/page';
+import Contacto from '@/app/home/contacto/page';
 
 export default function Home() {
   return (
@@ -13,7 +14,6 @@ export default function Home() {
       <Nosotros />
       <Testimonio />
       <Caenos />
-      <Footer />
     </div>
   );
 }
