@@ -23,16 +23,16 @@ export default function NavBar() {
         as="nav"
         className={`backdrop-blur-sm bg-black/60 absolute z-10 ${
           menuOpen ? 'rounded-b-lg ' : 'rounded-full'
-        } w-7/12 top-5`}
+        } w-11/12 sm:w-8/12 md:w-7/12 top-10`}
       >
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-14 items-center justify-between">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
-                  <Image src={Logo} width={25} height={25} alt="" />
+                  <Image src={Logo} width={25} height={25} alt="Logo" />
                   <a href="" className="ml-2">
-                    <span className="font-semibold text-xl tracking-tight">
+                    <span className="font-semibold text-xl tracking-tight mr-2">
                       Café
                     </span>
                     <span
