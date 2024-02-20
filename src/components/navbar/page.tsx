@@ -30,17 +30,19 @@ export default function NavBar() {
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-14 items-center justify-between">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
-                  <Image src={Logo} width={25} height={25} alt="Logo" />
-                  <a href="" className="ml-2">
-                    <span className="font-semibold text-xl tracking-tight mr-2">
-                      Café
-                    </span>
-                    <span
-                      className={`${comforter_brush.className} font-semibold text-xl tracking-tight`}
-                    >
-                      Delicia
-                    </span>
-                  </a>
+                    <Image src={Logo} width={25} height={25} alt="Logo" />
+                  <Link href="/" legacyBehavior>
+                    <a className="ml-2">
+                      <span className="font-semibold text-xl tracking-tight mr-2">
+                        Café
+                      </span>
+                      <span
+                        className={`${comforter_brush.className} font-semibold text-xl tracking-tight`}
+                      >
+                        Delicia
+                      </span>
+                    </a>
+                  </Link>
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center space-x-4 sm:hidden">
                   <Disclosure.Button

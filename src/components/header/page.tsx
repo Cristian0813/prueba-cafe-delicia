@@ -23,7 +23,7 @@ export default function Header() {
           />
         </figure>
         <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <div className="w-[60%] sm:w-[50%] dm:w-[70%] mt-40 sm:mt-20 md:mt-40">
+          <div className="w-[70%] sm:w-[50%] dm:w-[70%] mt-40 sm:mt-20 md:mt-40">
             {' '}
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl text-center">
               Disfrutá del sabor auténtico en{' '}
@@ -41,7 +41,7 @@ export default function Header() {
             </p>
           </div>
           <div className="mb-8 text-white text-md font-bold text-center mt-36 sm:mt-30 md:mt-40">
-            <a href="" className="block mb-4">
+            <a className="block mb-4">
               Conocenos
               <div className="flex justify-center">
                 <svg

@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import LogoWhite from '/public/logo-white.png';
 import { Comforter_Brush } from 'next/font/google';
+import Link from 'next/link';
+
 
 const comforter_brush = Comforter_Brush({
   subsets: ['latin'],
@@ -9,26 +11,28 @@ const comforter_brush = Comforter_Brush({
 });
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <div className="bg-[#301C03] text-[#FDF4E7] mt-8 sm:mt-16">
         <div className="px-6 py-6 md:px-16 md:py-16 flex flex-col md:flex-row">
           <div className="gap-3 md:w-7/12 md:pr-12 sm:py-10 sm:px-10">
             <div className="flex items-center">
-              <a href="" className="flex items-center">
-                <Image
-                  src={LogoWhite}
-                  className="w-24 h-24 md:w-32 md:h-32"
-                  alt=""
-                />
-                <p className="font-semibold text-4xl tracking-tight ml-3 md:text-4xl">
-                  Café{' '}
-                  <span
-                    className={`${comforter_brush.className} font-semibold`}
-                  >
-                    Delicia
-                  </span>
-                </p>
-              </a>
+              <Link href="/" legacyBehavior>
+                <a className="flex items-center">
+                  <Image
+                    src={LogoWhite}
+                    className="w-24 h-24 md:w-32 md:h-32"
+                    alt=""
+                  />
+                  <p className="font-semibold text-4xl tracking-tight ml-3 md:text-4xl">
+                    Café{' '}
+                    <span
+                      className={`${comforter_brush.className} font-semibold`}
+                    >
+                      Delicia
+                    </span>
+                  </p>
+                </a>
+              </Link>
             </div>
             <div className="w-8/12">
               <h3 className="text-4xl md:text-3xl">
@@ -47,7 +51,7 @@ export default function Footer() {
               <ul role="list">
                 <li className=" group/item item-start pb-1">
                   <a
-                    href=""
+                    href="#conocenos"
                     className="group/edit hover:font-medium hover:rounded-lg"
                   >
                     Nosotros
@@ -55,7 +59,7 @@ export default function Footer() {
                 </li>
                 <li className=" group/item item-start pb-1">
                   <a
-                    href=""
+                    href="#cafe"
                     className="group/edit hover:font-medium hover:rounded-lg"
                   >
                     Café
@@ -63,7 +67,7 @@ export default function Footer() {
                 </li>
                 <li className=" group/item item-start pb-1">
                   <a
-                    href=""
+                    href="#panaderia"
                     className="group/edit hover:font-medium hover:rounded-lg"
                   >
                     Panadería
@@ -71,7 +75,7 @@ export default function Footer() {
                 </li>
                 <li className=" group/item item-start pb-1">
                   <a
-                    href=""
+                    href="#bistro"
                     className="group/edit hover:font-medium hover:rounded-lg"
                   >
                     Bistro
@@ -79,7 +83,7 @@ export default function Footer() {
                 </li>
                 <li className=" group/item item-start pb-1">
                   <a
-                    href=""
+                    href="#testimonio"
                     className="group/edit hover:font-medium hover:rounded-lg"
                   >
                     Testimonios
@@ -87,7 +91,7 @@ export default function Footer() {
                 </li>
                 <li className=" group/item item-start pb-1">
                   <a
-                    href=""
+                    href="#historia"
                     className="group/edit hover:font-medium hover:rounded-lg"
                   >
                     Historia
@@ -95,7 +99,7 @@ export default function Footer() {
                 </li>
                 <li className=" group/item item-start pb-1">
                   <a
-                    href="/contacto"
+                    href="/home/contacto"
                     className="group/edit hover:font-medium hover:rounded-lg"
                   >
                     Contacto

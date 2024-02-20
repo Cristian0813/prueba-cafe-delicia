@@ -3,8 +3,8 @@ import imagTesty from '/public/home/testimonial.jpg';
 
 export default function Testimonio() {
   return (
-    <div>
-      <div className="relative h-96 w-full overflow-hidden gap-4 px-4 sm:px-8 md:px-16 lg:px-40 md:mt-10 sm:mt-10 mt-16">
+    <>
+      <section id='testimonio' className="relative h-96 w-full overflow-hidden gap-4 px-4 sm:px-8 md:px-16 lg:px-40 md:mt-10 sm:mt-10 mt-16">
         <div>
           <Image
             src={imagTesty}
@@ -21,7 +21,7 @@ export default function Testimonio() {
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

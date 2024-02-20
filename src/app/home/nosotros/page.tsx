@@ -10,7 +10,10 @@ export default function Nosotros() {
     <>
       <div className="gap-4 px-4 sm:px-8 md:px-32 mt-8 sm:mt-16 md:mt-16">
         <div className="p-4 flex flex-col sm:flex-row">
-          <div className="relative w-full sm:w-80 h-60 sm:h-96 mb-4 sm:mb-0 sm:mr-4 rounded-lg">
+          <div
+            className="relative w-full sm:w-80 h-60 sm:h-96 mb-4 sm:mb-0 sm:mr-4 rounded-lg"
+            id="conocenos"
+          >
             <Image
               src={tazaDeCafe}
               alt="Taza de café"
@@ -36,7 +39,7 @@ export default function Nosotros() {
             </div>
           </div>
         </div>
-        <div className="p-4 md:flex md:mt-8 sm:mt-8 mt-8">
+        <div className="p-4 md:flex md:mt-8 sm:mt-8 mt-8" id='historia'>
           <div className=" md:text-left sm:text-center text-center md:flex p-4 ">
             <div className="flex items-center justify-center">
               <Image src={imgGps} alt="Localización" className="w-28 md:w-40" />
@@ -75,7 +78,7 @@ export default function Nosotros() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 items-center justify-center sm:items-center sm:justify-center md:items-center md:justify-center text-center ">
-            <div className="p-4">
+            <div className="p-4" id='cafe'>
               <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
                   src={cafeGalleta}
@@ -90,7 +93,7 @@ export default function Nosotros() {
                 emparejala con una bebidita caliente
               </p>
             </div>
-            <div className="p-4">
+            <div className="p-4" id='panaderia'>
               <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
                   src={batidoCafe}
@@ -105,7 +108,7 @@ export default function Nosotros() {
                 heladitos
               </p>
             </div>
-            <div className="p-4">
+            <div className="p-4" id='bistro'>
               <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
                   src={bistoCarne}
