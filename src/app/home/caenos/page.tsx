@@ -7,8 +7,43 @@ export default function Caenos() {
   return (
     <>
       <div className=" gap-4 px-4 sm:px-8 md:px-16 lg:px-40 mt-16 sm:mt-24">
-        <div className="p-4 flex flex-col sm:flex-row">
-          <div className=" relative w-full sm:w-1/2 h-36 sm:h-screen mb-4 sm:mb-0 sm:mr-4 rounded-lg">
+        <section className="md:hidden" style={{ height: '869px' }}>
+          <div className="px-7 relative">
+            <Image
+              src={contact1}
+              width={216}
+              height={372}
+              alt="Lugar 1"
+              className="rounded-3xl absolute"
+              style={{ top: '128px', left: '20px' }}
+              priority={false}
+            />
+            <Image
+              src={contact2}
+              width={216}
+              height={372}
+              alt="Lugar 2"
+              className="rounded-3xl absolute right-0	"
+              style={{ top: '235px', left: '184px' }}
+              priority={false}
+            />
+          </div>
+          <div
+            style={{ top: '640px' }}
+            className="gap-6 relative	flex flex-col text-center"
+          >
+            <h2 className="text-6xl	font-semibold	">¡Caénos!</h2>
+            <p className="px-6">
+              Estamos en el barrio Granada, al lado de Container Park y diagonal
+              a 1975
+            </p>
+            <div>
+              <button className="button-outline">Contáctanos</button>
+            </div>
+          </div>
+        </section>
+        <section className="p-4 flex flex-col md:flex-row">
+          <div className=" relative md:w-1/2 md:h-[70vh] ">
             <Image
               src={contact1}
               alt="Lugar 1"
@@ -44,7 +79,7 @@ export default function Caenos() {
               />
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

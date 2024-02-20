@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header>
       <div className="relative">
-        <figure className="w-full relative z-0 overflow-hidden brightness-50 saturate-150 h-[70vh] sm:h-[75vh] nd:h-[99vh]">
+        <figure className="w-full relative z-0 overflow-hidden brightness-50 saturate-150 h-[75vh] sm:h-[80vh] md:h-[99vh]">
           <Image
             src={imgCafeteria}
             alt="Background"
@@ -23,9 +23,9 @@ export default function Header() {
           />
         </figure>
         <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <div className="w-[60%] sm:w-[50%] dm:w-[70%] mt-40 sm:mt-30 md:mt-20">
+          <div className="w-[60%] sm:w-[50%] dm:w-[70%] mt-40 sm:mt-20 md:mt-40">
             {' '}
-            <h1 className="text-white text-2xl sm:text-3xl md:text-5xl text-center">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl text-center">
               Disfrutá del sabor auténtico en{' '}
               <span className="text-[#EE8E11]">Café</span>
               <span className={`${comforter_brush.className} text-[#EE8E11]`}>
@@ -34,13 +34,13 @@ export default function Header() {
             </h1>
           </div>
           <div className="w-[80%] sm:w-[70%] dm:w-[70%] mt-4">
-            <p className="text-white text-center text-2lg sm:text-4lg md:text-4xl">
+            <p className="text-white text-center text-2lg sm:text-4lg md:text-xl">
               Café Delicia es una experiencia única con café de alta calidad y
               un ambiente parchado para todos. ¡Vení y disfrutá de un momento de
               delicia con nosotros!
             </p>
           </div>
-          <div className="mb-8 text-white text-md font-bold text-center mt-10">
+          <div className="mb-8 text-white text-md font-bold text-center mt-36 sm:mt-30 md:mt-40">
             <a href="" className="block mb-4">
               Conocenos
               <div className="flex justify-center">
