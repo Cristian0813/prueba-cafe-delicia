@@ -13,7 +13,7 @@ async function verifyRecaptchaToken(token: string): Promise<boolean> {
     const { success, score } = response.data;
     return success && score > 0.5;
   } catch (error) {
-    console.error('Error verifying reCAPTCHA token:', error);
+    console.error('Error al verificar el token reCAPTCHA:', error);
     return false;
   }
 }
@@ -42,10 +42,10 @@ async function sendEmail(
   return new Promise<void>((resolve, reject) => {
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.error('Error sending email:', error);
+        console.error('Error al enviar correo electrónico:', error);
         reject(error);
       } else {
-        console.log('Email sent:', info.response);
+        console.log('Correo electrónico enviado:', info.response);
         resolve();
       }
     });
@@ -61,16 +61,20 @@ export default async function router(
 
     const isRecaptchaValid = await verifyRecaptchaToken(token);
     if (!isRecaptchaValid) {
-      return res.status(403).json({ error: 'Invalid reCAPTCHA token' });
+      return res.status(403).json({ error: 'Token reCAPTCHA no válido' });
     }
 
     try {
       await sendEmail(username, email, phone, message);
-      return res.status(200).json({ message: 'Email sent successfully' });
+      return res
+        .status(200)
+        .json({ message: 'Correo electrónico enviado correctamente' });
     } catch (error) {
-      return res.status(500).json({ error: 'Error sending email' });
+      return res
+        .status(500)
+        .json({ error: 'Error al enviar correo electrónico' });
     }
   } else {
-    return res.status(405).json({ error: 'Method Not Allowed' });
+    return res.status(405).json({ error: 'Método no permitido' });
   }
 }

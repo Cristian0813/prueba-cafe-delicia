@@ -34,7 +34,7 @@ export default function Contacto() {
     e.preventDefault();
 
     try {
-      const response = await fetch('/api/contacto', {
+      const response = await fetch('/app/api', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
