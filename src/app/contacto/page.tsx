@@ -2,63 +2,62 @@
 
 import React, { useState } from 'react';
 import Iframe from '@/components/iframe/page';
-import NavBar from '@/components/navbar/page';
 import Recaptcha from '@/components/recaptcha/page';
 
-interface FormData {
-  username: string;
-  email: string;
-  phone: string;
-  message: string;
-}
-
 export default function Contacto() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     username: '',
     email: '',
     phone: '',
     message: '',
   });
-  const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    sendEmail(formData);
+  };
 
+  const sendEmail = async (data: any) => {
     try {
-      const response = await fetch('/api/contacto', {
+      console.log('Data before stringify:', data); // Agregamos este console.log
+      const response = await fetch('http://localhost:3001/api/email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
-
-      if (response.ok) {
-        console.log('Email sent successfully');
-      } else {
-        console.error('Error sending email:', response.statusText);
-      }
+      const result = await response.json();
+      console.log(result);
+      // Aquí puedes manejar la respuesta del servidor como desees
     } catch (error) {
-      console.error('Error sending form:', error);
+      console.error('Error al enviar el formulario:', error);
     }
   };
 
+  const [token, setToken] = useState('');
 
   return (
     <>
-      <NavBar />
-      <section className="mt-20 mx-6 sm:mx-12 md:mx-26 flex flex-col md:flex-row md:items-start">
-        <Recaptcha setRecaptchaToken={setRecaptchaToken} />
-        <form onSubmit={handleSubmit} className="flex-1 max-w-md mr-4 md:mr-10">
+      <section className="mt-36 mx-auto md:mx-auto flex flex-col md:flex-row md:items-start">
+        <Recaptcha
+          setRecaptchaToken={setToken}
+          recaptchaSiteKey="6Ld_wnkpAAAAAOyestP_dQB_aIL-xFbXm3Ij7GkT"
+        />
+        <form
+          onSubmit={handleSubmit}
+          className="flex-1 max-w-md mx-auto md:mr-10"
+        >
           <div className="space-y-12">
             <div className="pb-12">
               <h1 className="text-black text-left text-6xl font-semibold">

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 interface Props {
   setRecaptchaToken: React.Dispatch<React.SetStateAction<string>>;
+  recaptchaSiteKey: string; // Nueva clave de sitio reCAPTCHA
 }
 
 interface RecaptchaEnterprise {
@@ -19,13 +20,12 @@ interface WindowWithRecaptcha extends Window {
   };
 }
 
-const Recaptcha: React.FC<Props> = ({ setRecaptchaToken }) => {
+const Recaptcha: React.FC<Props> = ({ setRecaptchaToken, recaptchaSiteKey }) => { // Utiliza la nueva clave como prop
   useEffect(() => {
     const loadRecaptchaScript = () => {
       return new Promise<void>((resolve, reject) => {
         const script = document.createElement('script');
-        script.src =
-          'https://www.google.com/recaptcha/enterprise.js?render=6Ld_wnkpAAAAAOyestP_dQB_aIL-xFbXm3Ij7GkT';
+        script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaSiteKey}`; // Usa la nueva clave aquí
         script.async = true;
         script.onload = () => resolve();
         script.onerror = reject;
@@ -43,7 +43,7 @@ const Recaptcha: React.FC<Props> = ({ setRecaptchaToken }) => {
             .execute === 'function'
         ) {
           (window as unknown as WindowWithRecaptcha).grecaptcha.enterprise.execute(
-            '6Ld_wnkpAAAAAOyestP_dQB_aIL-xFbXm3Ij7GkT',
+            recaptchaSiteKey, // Usa la nueva clave aquí
             {
               callback: (token: string) => {
                 setRecaptchaToken(token);
@@ -65,7 +65,7 @@ const Recaptcha: React.FC<Props> = ({ setRecaptchaToken }) => {
     return () => {
       // Cleanup code if needed
     };
-  }, [setRecaptchaToken]);
+  }, [setRecaptchaToken, recaptchaSiteKey]); // Agrega recaptchaSiteKey a la lista de dependencias
 
   return null;
 };

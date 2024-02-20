@@ -15,7 +15,7 @@ const menuNavegacion: MenuItems[] = [
   {
     id: 'contacto',
     text: 'contacto',
-    route: '/home/contacto',
+    route: '    /contacto',
     current: 'false',
   },
 ];
@@ -59,5 +59,4 @@ const navegacionVineta: MenuVineta[] = [
     title: 'historia',
     route: '#historia',
   },
-  
 ];
