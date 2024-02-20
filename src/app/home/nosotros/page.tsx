@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import image1 from '/public/home/locally-sourced.jpg';
-import image2 from '/public/home/locally-sourced.png';
-import image3 from '/public/home/hollistic.png';
-import image4 from '/public/home/product-1.jpg';
-import image5 from '/public/home/product-2.jpg';
-import image6 from '/public/home/product-3.jpg';
+import tazaDeCafe from '/public/home/locally-sourced.jpg';
+import imgGps from '/public/home/locally-sourced.png';
+import imgDiner from '/public/home/hollistic.png';
+import cafeGalleta from '/public/home/product-1.jpg';
+import batidoCafe from '/public/home/product-2.jpg';
+import bistoCarne from '/public/home/product-3.jpg';
 export default function Nosotros() {
   return (
     <>
@@ -12,7 +12,7 @@ export default function Nosotros() {
         <div className="p-4 flex flex-col sm:flex-row">
           <div className="relative w-full sm:w-80 h-60 sm:h-96 mb-4 sm:mb-0 sm:mr-4 rounded-lg">
             <Image
-              src={image1}
+              src={tazaDeCafe}
               alt="Taza de café"
               layout="fill"
               objectFit="cover"
@@ -39,7 +39,7 @@ export default function Nosotros() {
         <div className="p-4 md:flex md:mt-8 sm:mt-8 mt-8">
           <div className=" md:text-left sm:text-center text-center md:flex p-4 ">
             <div className="flex items-center justify-center">
-              <Image src={image2} alt="Localización" className="w-28 md:w-56" />
+              <Image src={imgGps} alt="Localización" className="w-28 md:w-40" />
             </div>
             <div className=" items-center justify-center ml-3">
               <h2 className="text-[#EE8E11] text-xl font-semibold mt-4">
@@ -54,7 +54,7 @@ export default function Nosotros() {
           </div>
           <div className="md:flex p-4 md:text-left sm:text-center text-center">
             <div className="flex items-center justify-center">
-              <Image src={image3} alt="Ubicación" className="w-28 md:w-56" />
+              <Image src={imgDiner} alt="Ubicación" className="w-28 md:w-40" />
             </div>
             <div className=" items-center justify-center ml-3">
               <h2 className="text-[#EE8E11] text-xl font-semibold mt-4">
@@ -74,11 +74,11 @@ export default function Nosotros() {
               Nuestros Servicios
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 mt-4 items-center justify-center sm:items-center sm:justify-center md:items-center md:justify-center text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 items-center justify-center sm:items-center sm:justify-center md:items-center md:justify-center text-center ">
             <div className="p-4">
               <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
-                  src={image4}
+                  src={cafeGalleta}
                   alt="Café con galletas"
                   layout="fill"
                   objectFit="cover"
@@ -93,7 +93,7 @@ export default function Nosotros() {
             <div className="p-4">
               <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
-                  src={image5}
+                  src={batidoCafe}
                   alt="Batido de café"
                   layout="fill"
                   objectFit="cover"
@@ -108,7 +108,7 @@ export default function Nosotros() {
             <div className="p-4">
               <div className="relative w-full h-80 md:w-full md:h-80 sm:w-96 sm:h-96">
                 <Image
-                  src={image6}
+                  src={bistoCarne}
                   alt="Bisto de carne"
                   layout="fill"
                   objectFit="cover"
