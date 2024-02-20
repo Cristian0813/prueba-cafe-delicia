@@ -33,18 +33,13 @@ export default function Contacto() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!recaptchaToken) {
-      console.error('You must complete reCAPTCHA');
-      return;
-    }
-
     try {
       const response = await fetch('/api/contacto', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formData, token: recaptchaToken }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -56,6 +51,7 @@ export default function Contacto() {
       console.error('Error sending form:', error);
     }
   };
+
 
   return (
     <>

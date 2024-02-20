@@ -21,11 +21,21 @@ const Recaptcha: React.FC<Props> = ({ setRecaptchaToken }) => {
     script.async = true;
     document.body.appendChild(script);
 
+    script.onerror = (error) => {
+      console.error('Error loading reCAPTCHA script:', error);
+    };
+
+
     // Espera a que el script de recaptcha se cargue antes de acceder a grecaptcha
     script.onload = () => {
-      const token = window.grecaptcha.enterprise.getResponse();
-      setRecaptchaToken(token);
+      if (window.grecaptcha && window.grecaptcha.enterprise) {
+        const token = window.grecaptcha.enterprise.getResponse();
+        setRecaptchaToken(token);
+      } else {
+        console.error('reCAPTCHA Enterprise is not properly initialized');
+      }
     };
+
 
     return () => {
       document.body.removeChild(script);
