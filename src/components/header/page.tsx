@@ -5,6 +5,7 @@ import Image from 'next/image';
 import imgCafeteria from '/public/home/hero-background.jpg';
 import { Comforter_Brush } from 'next/font/google';
 import { motion, useAnimation } from 'framer-motion';
+import { MouseEvent } from 'react';
 
 const comforter_brush = Comforter_Brush({
   subsets: ['latin'],
@@ -12,31 +13,36 @@ const comforter_brush = Comforter_Brush({
   weight: '400',
 });
 
+const scrollToSection = (event: MouseEvent<HTMLDivElement>) => {
+  event.preventDefault();
+  const section = document.getElementById('conocenos');
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 export default function Header() {
   const controls = useAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
-      controls.start({ opacity: window.scrollY > 100 ? 0 : 1 }); // Cambia 100 según lo que necesites
+      controls.start({ opacity: window.scrollY > 100 ? 0 : 1 });
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-    
   }, [controls]);
 
-   const variants = {
-     initial: { scale: 1 },
-     animate: {
-       scale: [1, 1.1, 1],
-       transition: { duration: 0.5, repeat: Infinity },
-     },
-     hover: { scale: 1 }, // Escala a 1 cuando el cursor está sobre el elemento
-   };
+  const variants = {
+    initial: { scale: 1 },
+    animate: {
+      scale: [1, 1.1, 1],
+      transition: { duration: 0.5, repeat: Infinity },
+    },
+    hover: { scale: 1.4 },
+  };
 
   return (
     <header>
-    
       <Fragment>
         <motion.div
           className="relative"
@@ -76,8 +82,11 @@ export default function Header() {
                 variants={variants}
                 initial="initial"
                 animate="animate"
-                whileHover="hover" // Define la variación "hover" cuando el cursor está sobre el elemento
+                whileHover="hover"
                 className="block mb-4"
+                onClick={(event: MouseEvent<HTMLDivElement>) =>
+                  scrollToSection(event)
+                }
               >
                 <a href="#conocenos">
                   Conocenos
