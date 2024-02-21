@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Café Delicia
 
-## Getting Started
+Bienvenido al repositorio de Café Delicia, una marca caleña comprometida con ofrecerte una experiencia auténtica y acogedora. Somos cálidos, auténticos y amables en todo lo que hacemos. Buscamos crear momentos de verdadera delicia para todos con nuestra selección de cafés locales de primera y platos para calmar el hambre. Nuestro enfoque cálido y amistoso refleja nuestro compromiso con tu satisfacción y el bienestar de los caleños.
 
-First, run the development server:
+## Información del Proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este proyecto ha sido desarrollado utilizando Next.js y TypeScript, aprovechando al máximo las características y ventajas que ofrecen estas tecnologías para crear una aplicación web robusta y escalable.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Localización
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Origen Local Priorizado
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Priorizamos los productos locales, colaborando estrechamente con agricultores del país para garantizar la frescura y calidad en cada taza.
 
-## Learn More
+## Ubicación
 
-To learn more about Next.js, take a look at the following resources:
+### Enfoque Holístico
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Consideramos cada aspecto del proceso de producción con cuidado y respeto hacia la naturaleza, promoviendo prácticas sostenibles en cada etapa.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Dependencias
 
-## Deploy on Vercel
+Este proyecto utiliza varias dependencias. A continuación, se detallan las principales junto con sus versiones:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **@headlessui/react:** ^0.0.0-insiders.08baf09
+- **@heroicons/react:** ^2.1.1
+- **axios:** ^1.6.7
+- **bootstrap-icons:** 1.11.3
+- **dotenv:** ^16.4.4
+- **framer:** ^2.4.1
+- **motion:** ^10.17.0
+- **next:** 14.1.0
+- **node-fetch:** ^3.3.2
+- **nodemailer:** ^6.9.9
+- **react:** ^18
+- **react-dom:** ^18
+- **react-google-recaptcha:** ^3.1.0
+- **react-icons:** ^5.0.1
+- **react-scroll:** ^1.9.0
+- **sharp:** ^0.33.2
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Dependencias de Desarrollo
+
+Además, para el desarrollo, se utilizan las siguientes dependencias:
+
+- **@types/node:** ^20
+- **@types/nodemailer:** ^6.4.14
+- **@types/react:** ^18
+- **@types/react-dom:** ^18
+- **@types/react-google-recaptcha:** ^2.1.9
+- **autoprefixer:** ^10.0.1
+- **dotenv-webpack:** ^8.0.1
+- **eslint:** ^8
+- **eslint-config-next:** 14.1.0
+- **postcss:** ^8
+- **tailwindcss:** ^3.3.0
+- **typescript:** ^5
+
+¡Gracias por tu interés en Café Delicia! Si tienes alguna pregunta o sugerencia, no dudes en contactarnos. ¡Disfruta de tu café! ☕️
